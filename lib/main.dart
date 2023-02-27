@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tugas1/secondPage.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -6,8 +7,36 @@ void main() {
   ));
 }
 
+final TextEditingController usernameController = TextEditingController();
+final TextEditingController passwordController = TextEditingController();
+
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
+
+  void onLogin(BuildContext context) {
+    String username = usernameController.text.toString();
+    String password = passwordController.text.toString();
+
+    if(username == "admin" && password == "admin") {
+      Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) {
+            return const KelompokApp();
+          })
+      );
+    } else {
+      showDialog(
+          context: context,
+          builder: (context) {
+            return const AlertDialog(
+              icon: Icon(Icons.cancel),
+              iconColor: Colors.red,
+              title: Text("Username atau Password Salah"),
+            );
+          }
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,10 +56,13 @@ class LoginForm extends StatelessWidget {
                       letterSpacing: 4.0,
                       fontWeight: FontWeight.bold),
                 ),
+
+                //Username
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
-                    cursorColor: Colors.red,
+                    controller: usernameController,
+                    cursorColor: const Color(0xffF18265),
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(color: Colors.red, width: 2.0),
@@ -51,10 +83,13 @@ class LoginForm extends StatelessWidget {
                     ),
                   ),
                 ),
+
+                //Password
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
-                    cursorColor: Colors.red,
+                    controller: passwordController,
+                    cursorColor: const Color(0xffF18265),
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(color: Colors.red, width: 2.0),
@@ -72,6 +107,25 @@ class LoginForm extends StatelessWidget {
                       ),
                       labelText: ('Password'),
                       labelStyle: const TextStyle(color: Colors.red),
+                    ),
+                  ),
+                ),
+
+                TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: const Color(0xffF18265),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    padding: EdgeInsets.all(20)
+                  ),
+                  onPressed: () {
+                    onLogin(context);
+                  },
+                  child: const Text(
+                    "LOGIN",
+                    style: TextStyle(
+                      color: Color(0xffffffff),
                     ),
                   ),
                 ),
