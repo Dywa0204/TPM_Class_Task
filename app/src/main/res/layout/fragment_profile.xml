@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProfileFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/photo"
+            android:adjustViewBounds="true"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textSize="28sp"
+            android:text="Dywa Pratama Haswanto Putra"
+            android:fontFamily="sans-serif"
+            android:textFontWeight="700"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:textSize="20sp"
+            android:text="123200041"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif"
+            android:textFontWeight="700"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:text="Kelas IF B"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:text="Hobi : Nonton Film, Ngoding, Desain Grafis"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</FrameLayout>

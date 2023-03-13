@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SegitigaFragment">
+
+    <LinearLayout
+        android:padding="32dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textAlignment="center"
+            android:text="SEGITIGA"
+            android:textColor="@color/black"
+            android:padding="20dp"
+            android:fontFamily="sans-serif"
+            android:textFontWeight="700"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:id="@+id/to_luas"
+                android:text="Luas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:backgroundTint="#939393"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:id="@+id/to_keliling"
+                android:text="Keliling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/field_1"
+                android:background="@drawable/border"
+                android:padding="20dp"
+                android:hint="Alas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/field_2"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:padding="20dp"
+                android:hint="Tinggi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="number"
+                android:visibility="gone"
+                android:id="@+id/field_3"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:padding="20dp"
+                android:hint="Sisi C"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/result_btn"
+                android:layout_marginTop="20dp"
+                android:text="HITUNG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="24dp"
+                android:background="@drawable/border"
+                android:padding="20dp"
+                android:text="Hasil"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:id="@+id/result_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
